@@ -228,6 +228,7 @@ class Wpfaevent {
 	 * @access   private
 	 */
 	private function define_page_hooks() {
+		$this->loader->add_action( 'init', 'Wpfaevent_Schedule_Helper', 'ensure_schedule_page', 20 );
 		$this->loader->add_action( 'init', 'Wpfaevent_Additional_Information_Helper', 'ensure_additional_information_page', 21 );
 		$this->loader->add_action( 'init', 'Wpfaevent_Partner_Helper', 'ensure_partner_page', 22 );
 	}
